@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				helm: {
+					blue: '#0F1689',
+					teal: '#06C1BC',
+					navy: '#091C84',
+					gray: '#2A303C',
+					lightGray: '#F0F4F8'
+				},
+				kubernetes: {
+					blue: '#326CE5',
+					darkBlue: '#0C2D6B',
+					lightBlue: '#A1C4FD'
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +97,24 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-opacity': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-opacity': 'pulse-opacity 2s infinite ease-in-out',
+				'spin-slow': 'spin-slow 3s linear infinite'
+			},
+			fontFamily: {
+				mono: ['JetBrains Mono', 'monospace']
 			}
 		}
 	},
